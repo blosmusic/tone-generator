@@ -1,0 +1,132 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #262626;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #00ff91;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.app-container {
+    background-color: #fdfdfd;
+    border-radius: 5px solid #333;
+    box-shadow: 0 0 15px 0 #00ff91;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.wavetype-container {
+    background-color: #00ff91;
+    border-radius: 2px solid #333;
+    padding: 20px;
+}
+
+.wavetype-radio {
+    background-color: #00ff91;
+    color: #333;
+    width: 100vu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.wavetype-radio input {
+    color: #333;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #333;
+    border: 2px solid #333;
+    opacity: 85%;
+}
+
+input[type="radio"]:checked {
+    background-color: #fdfdfd;
+
+}
+
+input[type="radio"]:hover {
+    opacity: 100%;
+    transition: .3s;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.freq-slider {
+    width: 500px;
+    height: 80px;
+    background-color: #333;
+    border: 3px;
+    border-color: #00ff91;
+    color: #00ff91;
+    padding: 15px 32px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.freq-slider-container {
+    width: 250px;
+    display: flex;
+}
+
+.slider {
+    -web-appearance: none;
+    appearance: none;
+    background: #00ff91;
+    outline: #333;
+    transition: .2s;
+    opacity: .7;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #fdfdfd;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #fdfdfd;
+    opacity: 1;
+    cursor: pointer;
+}
