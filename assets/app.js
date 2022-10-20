@@ -6,9 +6,9 @@ let wavetypeValue;
 let waveType = "sine";
 freqValue.innerHTML = freqSlider.value;
 
-let frequencyOfOscillator = new Tone.Oscillator(
-  freqSlider.value,
-  waveType);
+const vol = new Tone.Volume(-12).toDestination();
+const gainNode = new Tone.Gain(0.5);
+const frequencyOfOscillator = new Tone.Oscillator(freqSlider.value, waveType);
 
 freqPlayToggle.addEventListener("click", function () {
   if (freqPlayToggle.innerText === "PLAY") {
@@ -19,13 +19,17 @@ freqPlayToggle.addEventListener("click", function () {
 });
 
 function startTone() {
-  frequencyOfOscillator.toDestination().start();
+  frequencyOfOscillator.connect(gainNode).toDestination().start();
+  gainNode.gain.setValueAtTime(0, 0.1);
+  gainNode.gain.linearRampToValueAtTime(0.5, 0.1);
   console.log("Oscillator started");
   freqPlayToggle.innerHTML = "STOP";
 }
 
 function stopTone() {
-  frequencyOfOscillator.stop();
+  frequencyOfOscillator.connect(gainNode).toDestination().stop();
+  gainNode.gain.setValueAtTime(0.5, 0.1);
+  gainNode.gain.linearRampToValueAtTime(0, 0.1);
   console.log("Oscillator stopped");
   freqPlayToggle.innerHTML = "PLAY";
 }
