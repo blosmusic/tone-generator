@@ -19,6 +19,16 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
 .app-container {
     background-color: #fdfdfd;
     border-radius: 5px solid #333;
@@ -28,13 +38,16 @@ h1 {
     justify-content: center;
 }
 
-.wavetype-container {
+.wavetype-container,
+.noise-container {
     background-color: #00ff91;
     border-radius: 2px solid #333;
+    box-shadow: 0 0 15px 0 #00ff91;
     padding: 20px;
 }
 
-.wavetype-radio {
+.wavetype-radio,
+.noise-radio {
     background-color: #00ff91;
     color: #333;
     width: 100vu;
@@ -44,7 +57,8 @@ h1 {
     padding: 10px;
 }
 
-.wavetype-radio input {
+.wavetype-radio input,
+.noise-radio input {
     color: #333;
     height: 20px;
     width: 20px;
@@ -168,7 +182,8 @@ label {
     margin: 20px 15px;
 }
 
-.freq-play-toggle {
+.freq-play-toggle,
+.noise-play-toggle {
     background-color: #00ff91;
     border: 3px solid #333;
     border-radius: 10%;
@@ -181,7 +196,8 @@ label {
     margin: 20px;
 }
 
-.freq-play-toggle:hover {
+.freq-play-toggle:hover,
+.noise-play-toggle:hover {
     background-color: #333;
     color: #00ff91;
     transition: .3s;

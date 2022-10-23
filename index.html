@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <h1>Tone Generator</h1>
+    <h1>Tone & Noise Generator</h1>
     <div class="app-container">
+        <h2>TONE SELECTOR</h2>
         <div class="wavetype-container">
             <div class="wavetype-radio">
                 <input class="wavetype" type="radio" name="wave" value="sine" id="waveform" checked>
@@ -31,7 +32,7 @@
                 <br />
                 <div class="freq-slider-container">
                     <input class="freq-input-slider" id="freq-input-slider" type="range" min="20" max="20000"
-                        value="200">
+                    value="440">
                     <br />
                 </div>
             </div>
@@ -39,6 +40,24 @@
                 <button class="freq-play-toggle" id="freq-play-toggle">PLAY</button>
             </div>
         </div>
+    </div>
+        <div class="app-container">
+            <h2>NOISE SELECTOR</h2>
+            <div class="noise-container">
+                <div class="noise-radio">
+                    <input class="noise" type="radio" name="noise" value="white" id="noise">
+                    <label for="white">White</label>
+                    <input class="noise" type="radio" name="noise" value="pink" id="noise" checked>
+                    <label for="pink">Pink</label>
+                    <input class="noise" type="radio" name="noise" value="brown" id="noise">
+                    <label for="brown">Brown</label>
+                </div>
+            </div>
+            <div class="app-container">
+                    <div class="button-container">
+                        <button class="noise-play-toggle" id="noise-play-toggle">PLAY</button>
+                    </div>
+            </div>
     </div>
 </body>
 <script src="./assets/app.js"></script>
